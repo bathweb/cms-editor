@@ -1,0 +1,11 @@
+.saved
+  .title
+    %label{:for => "title"} Title:
+    .input
+      %input#title{:type => "text", :name => "title", :class => "text", :disabled => true, :value => "#{@title}"}
+  .main-body
+    %label{:for => "main"} Main body:
+    .textarea
+      %textarea{:id => "main", :name => "main", :readonly => "readonly"}~"#{@main}"
+      .response
+        #{@html}

@@ -1,0 +1,12 @@
+.form
+  %form{:action => "/save", :method => "post"}
+    .title
+      %label{:for => "title"} Title:
+      .input
+        %input#title{:type => "text", :name => "title", :class => "title", :value => "#{@title}"}
+    .main-body
+      %label{:for => "main"} Main body:
+      .editor
+        %textarea#main.main{:name => "main"}~"#{@main}"
+    .actions
+      %input{:type => "submit", :value => "Save", :class => "button"}
